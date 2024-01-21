@@ -4,7 +4,11 @@ function Users({ users, dispatch, setBalance, balance }) {
     console.log(users);
 
     function handleFuel() {
-        // dispatch({ type: "fuel", setBalance, balance });
+        if(balance > 50){
+            dispatch({ type: "fuel", setBalance, balance });
+            setBalance(balance -50);
+        }
+        
     }
     return (
         <div>

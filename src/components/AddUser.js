@@ -5,7 +5,9 @@ function AddUser({ dispatch, setBalance, balance }) {
 
     function handleClick(e) {
         e.preventDefault();
-        // dispatch({ type: "add", name, setBalance, balance });
+        const id = uuidv4();
+         dispatch({ type: "add", name, setBalance, balance });
+         setBalance(balance +10);
         setName("");
     }
 
